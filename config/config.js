@@ -16,10 +16,10 @@ module.exports =
     "dialect": "postgres"
   },
   "production": {
-    "username": "nryllxwmipuqdv",
-    "password": "3e010321003b2316773f0cad50bfd6a72a02bb86194e96f8ec383f68ee10c92a",
-    "database": "d2d87bg2l69u27",
-    "host": "ec2-18-210-159-154.compute-1.amazonaws.com",
+    "username": PRODUCTION_USER,
+    "password": PRODUCTION_PASSWORD,
+    "database": DATABASE,
+    "host": HOST,
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL",
     "dialectOptions": {
