@@ -6,9 +6,13 @@ const PORT = 3001;
 
 const app = express();
 
-app.get('/', async (req, res) => {
+app.get('/messages', async (req, res) => {
     const getMessages = await messages.findAll();
     res.json(getMessages);
+});
+
+app.get('/', (req, res) => {
+    res.send('Hello World');
 });
 
 app.post('/message', async (req, res) => {
