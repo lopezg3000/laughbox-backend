@@ -2,7 +2,7 @@ const express = require("express");
 const Sequelize = require('sequelize');
 const { messages } = require('./models');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
