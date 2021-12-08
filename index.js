@@ -1,8 +1,11 @@
 const express = require("express");
 const Sequelize = require('sequelize');
 const { messages } = require('./models');
+const cors = require('cors'); //not sure why I need this
 
 const PORT = process.env.PORT || 3001;
+app.use(cors()); //not sure why I need this
+app.use(express.json()); //needed to parse req.body
 
 const app = express();
 
