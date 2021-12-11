@@ -13,14 +13,14 @@ module.exports = {
      */
     await queryInterface.bulkInsert('messages', [
       {
-        user: 'Justin',
-        message: 'Relax bro',
+        user: 'Mr. T',
+        message: 'I pity da foo who come up on my message board.',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         user: 'Eric',
-        message: 'Hope you get better bro!',
+        message: "You don't need a parachute to go skydiving. You need a parachute to go skydiving twice.",
         createdAt: new Date(),
         updatedAt: new Date()
       },
