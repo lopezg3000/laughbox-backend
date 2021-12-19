@@ -78,5 +78,5 @@ app.get('/auth/google/callback',
         // Successful authentication, redirect home.
         // console.log(req.user);
         // res.redirect('http://localhost:3000/home/' + req.user.name.givenName);
-        res.redirect('https://laughbox-app.herokuapp.com/home' + req.user.name.givenName);
+        res.redirect('https://laughbox-app.herokuapp.com/home/' + req.user.name.givenName);
     });
