@@ -4,8 +4,8 @@ const Sequelize = require('sequelize');
 const { messages } = require('./models');
 const cors = require('cors'); //not sure why I need this
 
-const PORT = process.env.PORT;
-// const PORT = 3001;
+// const PORT = process.env.PORT;
+const PORT = 3001;
 
 const app = express();
 // const session = require('express-session');
@@ -53,8 +53,8 @@ app.listen(PORT, () => {
 passport.use(new GoogleStrategy({
     clientID: '874265541931-hiibs2mjh13gibp4rhp790okhm34uimr.apps.googleusercontent.com',
     clientSecret: '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',
-    callbackURL: "https://afternoon-stream-01263.herokuapp.com/auth/google/callback",
-    // callbackURL: "http://localhost:3001/auth/google/callback",
+    // callbackURL: "https://afternoon-stream-01263.herokuapp.com/auth/google/callback",
+    callbackURL: "http://localhost:3001/auth/google/callback",
     // change to localhost to work locally
     passReqToCallback: true
 }, authUser));
@@ -62,6 +62,8 @@ passport.use(new GoogleStrategy({
 passport.serializeUser((user, done) => {
     done(null, user)
 })
+
+
 
 passport.deserializeUser((user, done) => {
     done(null, user)
@@ -74,7 +76,7 @@ app.get('/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/' }),
     function (req, res) {
         // Successful authentication, redirect home.
-
-        // res.redirect('http://localhost:3000/home');
-        res.redirect('https://laughbox-app.herokuapp.com/home');
+        // console.log(req.user);
+        res.redirect('http://localhost:3000/home/' + req.user.name.givenName);
+        // res.redirect('https://laughbox-app.herokuapp.com/home');
     });
