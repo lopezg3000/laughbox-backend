@@ -15,14 +15,14 @@ module.exports = {
       {
         user: 'Mr. T',
         message: 'I pity da foo who come up on my message board.',
-        createdAt: new Date(),
+        createdAt: new Date(), //
         updatedAt: new Date()
       },
       {
         user: 'Eric',
         message: "You don't need a parachute to go skydiving. You need a parachute to go skydiving twice.",
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date() 
       },
 
     ], {});
