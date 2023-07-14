@@ -25,7 +25,7 @@ app.get('/messages', async (req, res) => {
     const getMessages = await messages.findAll().catch((error) => {
         console.error(error);
     });
-    res.json(getMessages[1]);
+    res.json(getMessages);
 });
 
 app.get('/', (req, res) => {
