@@ -38,14 +38,15 @@ app.post('/message', async (req, res) => {
             user,
             message
         })
+
+        res.json({
+            id: newMessage.id
+        });
     } catch (error) {
         console.error(error);
     };
 
     // Send back the new user's ID in the response:
-    res.json({
-        id: newMessage.id
-    });
 })
 
 app.listen(PORT, () => {
