@@ -32,11 +32,15 @@ app.get('/', (req, res) => {
 
 app.post('/message', async (req, res) => {
     // req.body contains an Object with firstName, lastName, email
-    const { user, message } = req.body;
-    const newMessage = await messages.create({
-        user,
-        message
-    });
+    try {
+        const { user, message } = req.body;
+        const newMessage = await messages.create({
+            user,
+            message
+        })
+    } catch (error) {
+        console.error(error);
+    };
 
     // Send back the new user's ID in the response:
     res.json({
