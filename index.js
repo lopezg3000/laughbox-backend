@@ -22,7 +22,9 @@ const authUser = (request, accessToken, refreshToken, profile, done) => {
 
 
 app.get('/messages', async (req, res) => {
-    const getMessages = await messages.findAll();
+    const getMessages = await messages.findAll().catch((error) => {
+        console.error(error);
+    });
     res.json(getMessages);
 });
 
