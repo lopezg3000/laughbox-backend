@@ -6,7 +6,7 @@ const cors = require('cors'); //not sure why I need this
 
 const PORT = process.env.PORT;
 // const PORT = 3001;
-
+//did it work?
 const app = express();
 // const session = require('express-session');
 
