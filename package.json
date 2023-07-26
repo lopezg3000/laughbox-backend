@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "node index.js",
-    "start": "npm install && sequelize db:migrate && NODE_ENV=production",
+    "start": "sequelize-cli db:migrate && NODE_ENV=production && node index.js",
     "db:reset": "npm start npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
