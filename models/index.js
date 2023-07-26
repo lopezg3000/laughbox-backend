@@ -1,5 +1,5 @@
 'use strict';
-
+export const NODE_ENV = 'production';
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
