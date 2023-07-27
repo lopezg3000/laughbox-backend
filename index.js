@@ -58,8 +58,8 @@ app.listen(PORT, () => {
 // Google Passport
 
 passport.use(new GoogleStrategy({
-    clientID: '874265541931-hiibs2mjh13gibp4rhp790okhm34uimr.apps.googleusercontent.com',
-    clientSecret: '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',
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
     callbackURL: "https://laughbox-frontend.onrender.com/auth/google/callback",
     // callbackURL: "http://localhost:3001/auth/google/callback",
     // change to localhost to work locally
