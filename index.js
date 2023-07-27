@@ -62,7 +62,7 @@ const clientSecret = process.env.CLIENT_SECRET;
 passport.use(new GoogleStrategy({
     clientID,
     clientSecret,
-    callbackURL: "https://laughbox-frontend.onrender.com/auth/google/callback",
+    callbackURL: "https://laughbox-backend.onrender.com/auth/google/callback",
     // callbackURL: "http://localhost:3001/auth/google/callback",
     // change to localhost to work locally
     passReqToCallback: true
