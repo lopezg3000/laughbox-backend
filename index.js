@@ -87,5 +87,5 @@ app.get('/auth/google/callback',
         // Successful authentication, redirect home.
         // console.log(req.user);
         // res.redirect('http://localhost:3000/home/' + req.user.name.givenName);
-        res.redirect('https://laughbox-frontend.onrender.com/' + req.user.name.givenName);
+        res.redirect('https://laughbox-frontend.onrender.com/home' + req.user.name.givenName);
     });
