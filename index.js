@@ -60,8 +60,8 @@ app.listen(PORT, () => {
 passport.use(new GoogleStrategy({
     clientID: '874265541931-hiibs2mjh13gibp4rhp790okhm34uimr.apps.googleusercontent.com',
     clientSecret: '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',
-    // callbackURL: "https://afternoon-stream-01263.herokuapp.com/auth/google/callback",
-    callbackURL: "http://localhost:3001/auth/google/callback",
+    callbackURL: "https://laughbox-frontend.onrender.com/auth/google/callback",
+    // callbackURL: "http://localhost:3001/auth/google/callback",
     // change to localhost to work locally
     passReqToCallback: true
 }, authUser));
@@ -84,6 +84,6 @@ app.get('/auth/google/callback',
     function (req, res) {
         // Successful authentication, redirect home.
         // console.log(req.user);
-        res.redirect('http://localhost:3000/home/' + req.user.name.givenName);
-        // res.redirect('https://laughbox-app.herokuapp.com/home/' + req.user.name.givenName);
+        // res.redirect('http://localhost:3000/home/' + req.user.name.givenName);
+        res.redirect('https://laughbox-frontend.onrender.com/' + req.user.name.givenName);
     });
